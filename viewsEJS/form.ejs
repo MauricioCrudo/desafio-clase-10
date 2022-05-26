@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desafio con EJS</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<%- include('./partials/header.ejs')%>
+		<div class="flex-wrap">
+			<form action="/productos" method="post">
+				<input type="text" name="title" placeholder="Nombre del producto" />
+				<input type="number" name="price" placeholder="Precio del producto" />
+				<input type="text" name="thumbnail" placeholder="Thumbnaill" />
+				<input type="submit" />
+			</form>
+			<%- include('./partials/footer.ejs')%>
+		</div>
+		<a href="/productos">Ver productos</a>
+	</body>
+</html>
